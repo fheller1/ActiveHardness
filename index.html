@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <link rel="canonical" href="https://fheller1.github.io/activehardness/">
+  <!-- Primary Meta Tags -->
+  <!-- TODO: Replace with your paper title and author names -->
+  <meta name="title" content="Investigating Active Sampling for Hardness Classification with Vision-Based Tactile Sensors - Junyi Chen, Frederik Heller, Mario Gómez Andreu, Boris Belousov, Tim Schneider, Lisa P. Y. Lin, Katja Doerschner, Knut Drewing, Jan Peters, Alap Kshirsagar">
+  <!-- TODO: Write a compelling 150-160 character description of your research -->
+  <!-- TODO: Add 5-10 relevant keywords for your research area -->
+  <meta name="keywords" content="Active sampling, Hardness classification, Tactile sensing, machine learning, computer vision, AI">
+  <!-- TODO: List all authors -->
+  <meta name="author" content="Junyi Chen, Frederik Heller, Mario Gómez Andreu, Boris Belousov, Tim Schneider, Lisa P. Y. Lin, Katja Doerschner, Knut Drewing, Jan Peters, Alap Kshirsagar">
+  <meta name="robots" content="index, follow">
+  <meta name="language" content="English">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="article">
+  <!-- TODO: Replace with your institution or lab name -->
+  <meta property="og:site_name" content="Intelligent Autonomous Systems Lab, TU Darmstadt">
+  <!-- TODO: Same as paper title above -->
+  <meta property="og:title" content="Investigating Active Sampling for Hardness Classification with Vision-Based Tactile Sensors">
+  <!-- TODO: Same as description above -->
+  <!-- TODO: Replace with your actual website URL -->
+  <meta property="og:url" content="https://fheller1.github.io/activehardness/">
+  <!-- TODO: Create a 1200x630px preview image and update path -->
+  <meta property="article:author" content="Junyi Chen">
+  <meta property="article:section" content="Research">
+  <meta property="article:tag" content="Active sampling">
+  <meta property="article:tag" content="Hardness classification">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- TODO: Replace with your lab/institution Twitter handle -->
+  <!-- TODO: Replace with first author's Twitter handle -->
+  <!-- TODO: Same as paper title above -->
+  <meta name="twitter:title" content="Investigating Active Sampling for Hardness Classification with Vision-Based Tactile Sensors">
+  <!-- TODO: Same as description above -->
+  <!-- TODO: Same as social preview image above -->
+
+  <!-- Academic/Research Specific -->
+  <meta name="citation_author" content="Junyi Chen">
+  <meta name="citation_author" content="Frederik Heller">
+  <meta name="citation_author" content="Mario Gómez Andreu">
+  <meta name="citation_author" content="Boris Belousov">
+  <meta name="citation_author" content="Tim Schneider">
+  <meta name="citation_author" content="Lisa P. Y. Lin">
+  <meta name="citation_author" content="Katja Doerschner">
+  <meta name="citation_author" content="Knut Drewing">
+  <meta name="citation_author" content="Jan Peters">
+  <meta name="citation_author" content="Alap Kshirsagar">
+  <!-- TODO: Add confirmed publication date and venue metadata. -->
+  <meta name="citation_title" content="Investigating Active Sampling for Hardness Classification with Vision-Based Tactile Sensors">
+  
+  <!-- Additional SEO -->
+  <meta name="theme-color" content="#2563eb">
+  <meta name="msapplication-TileColor" content="#2563eb">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  
+  <!-- Preconnect for performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://ajax.googleapis.com">
+  <link rel="preconnect" href="https://documentcloud.adobe.com">
+  <link rel="preconnect" href="https://cdn.jsdelivr.net">
+
+
+  <!-- TODO: Replace with your paper title and authors -->
+  <title>Investigating Active Sampling for Hardness Classification with Vision-Based Tactile Sensors - Junyi Chen, Frederik Heller, Mario Gómez Andreu, Boris Belousov, Tim Schneider, Lisa P. Y. Lin, Katja Doerschner, Knut Drewing, Jan Peters, Alap Kshirsagar | Academic Research</title>
+  
+  <!-- Favicon and App Icons -->
+  <link rel="icon" type="image/svg+xml" href="static/images/favicon.svg">
+  <!-- TODO: Add an Apple touch icon. -->
+  
+  <!-- Critical CSS - Load synchronously -->
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+  
+  <!-- Non-critical CSS - Load asynchronously -->
+  <link rel="preload" href="static/css/bulma-carousel.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="static/css/bulma-slider.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="static/css/fontawesome.all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  
+  <!-- Fallback for browsers that don't support preload -->
+  <noscript>
+    <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+    <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+    <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  </noscript>
+  
+  <!-- Fonts - Optimized loading -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Defer non-critical JavaScript -->
+  <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script defer src="static/js/bulma-carousel.min.js"></script>
+  <script defer src="static/js/bulma-slider.min.js"></script>
+  <script defer src="static/js/index.js"></script>
+  
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ScholarlyArticle",
+  "headline": "Investigating Active Sampling for Hardness Classification with Vision-Based Tactile Sensors",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Junyi Chen"
+    },
+    {
+      "@type": "Person",
+      "name": "Frederik Heller"
+    },
+    {
+      "@type": "Person",
+      "name": "Mario Gómez Andreu"
+    },
+    {
+      "@type": "Person",
+      "name": "Boris Belousov"
+    },
+    {
+      "@type": "Person",
+      "name": "Tim Schneider"
+    },
+    {
+      "@type": "Person",
+      "name": "Lisa P. Y. Lin"
+    },
+    {
+      "@type": "Person",
+      "name": "Katja Doerschner"
+    },
+    {
+      "@type": "Person",
+      "name": "Knut Drewing"
+    },
+    {
+      "@type": "Person",
+      "name": "Jan Peters"
+    },
+    {
+      "@type": "Person",
+      "name": "Alap Kshirsagar"
+    }
+  ],
+  "url": "https://fheller1.github.io/activehardness/"
+}
+  </script>
+</head>
+<body>
+
+
+  <!-- Scroll to Top Button -->
+  <button class="scroll-to-top" onclick="scrollToTop()" title="Scroll to top" aria-label="Scroll to top">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <!-- TODO: Add related works using the upstream More Works component if desired. -->
+  <main id="main-content">
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <!-- TODO: Replace with your paper title -->
+            <h1 class="title is-1 publication-title">Investigating Active Sampling for Hardness Classification with Vision-Based Tactile Sensors</h1>
+            <div class="is-size-5 publication-authors">
+<span class="author-block">Junyi Chen<sup>1</sup>,</span>
+<span class="author-block">Frederik Heller<sup>1</sup>,</span>
+<span class="author-block">Mario Gómez Andreu<sup>1</sup>,</span>
+<span class="author-block">Boris Belousov<sup>2</sup>,</span>
+<span class="author-block">Tim Schneider<sup>1</sup>,</span>
+<span class="author-block">Lisa P. Y. Lin<sup>3</sup>,</span>
+<span class="author-block">Katja Doerschner<sup>3</sup>,</span>
+<span class="author-block">Knut Drewing<sup>3</sup>,</span>
+<span class="author-block">Jan Peters<sup>1,2,4,5</sup>,</span>
+<span class="author-block">Alap Kshirsagar<sup>1,6</sup></span>
+</div>
+
+                  <div class="is-size-5 publication-authors">
+                    <!-- TODO: Replace with your institution and conference/journal info -->
+                    <span class="author-block"><sup>1</sup> TU Darmstadt · <sup>2</sup> DFKI · <sup>3</sup> University of Giessen<br><sup>4</sup> Centre for Cognitive Science, TU Darmstadt · <sup>5</sup> Hessian.AI<br><sup>6</sup> IIT Delhi – Abu Dhabi<br><!-- TODO: Confirm venue and year. -->[Conference / publication details to be added]</span>
+                    <!-- TODO: Remove this line if no equal contribution -->
+                  </div>
+
+                  <div class="column has-text-centered">
+                    <div class="publication-links">
+                         <!-- TODO: Update with your arXiv paper ID -->
+                      <span class="link-block">
+                        <!-- TODO: Add paper URL. -->
+<button class="external-link button is-normal is-rounded is-dark" disabled>Paper (to be added)</button>
+                    </span>
+
+                    <!-- TODO: Add your supplementary material PDF or remove this section -->
+                    <span class="link-block">
+                      <!-- TODO: Add the Supplementary URL. -->
+<button class="external-link button is-normal is-rounded is-dark" disabled>Supplementary (to be added)</button>
+                  </span>
+
+                  <!-- TODO: Replace with your GitHub repository URL -->
+                  <span class="link-block">
+                    <!-- TODO: Add the Code URL. -->
+<button class="external-link button is-normal is-rounded is-dark" disabled>Code (to be added)</button>
+                </span>
+
+                <!-- TODO: Update with your arXiv paper ID -->
+                <span class="link-block">
+                  <!-- TODO: Add the arXiv URL. -->
+<button class="external-link button is-normal is-rounded is-dark" disabled>arXiv (to be added)</button>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Teaser placeholder -->
+<section class="hero teaser"><div class="container is-max-desktop"><div class="hero-body">
+<div class="notification is-light has-text-centered">[Teaser image or video to be added]</div>
+<h2 class="subtitle has-text-centered">[Teaser caption to be added]</h2>
+</div></div></section>
+
+<!-- Paper abstract -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <!-- TODO: Add abstract. -->
+          <p>[Abstract to be added]</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End paper abstract -->
+
+
+<!-- Results placeholder: replace with the upstream image carousel when ready. -->
+<section class="hero is-small"><div class="hero-body"><div class="container is-max-desktop">
+<h2 class="title is-3">Results</h2>
+<div class="notification is-light has-text-centered">[Results figures and captions to be added]</div>
+</div></div></section>
+
+
+
+
+<!-- Youtube video -->
+<section class="hero is-small is-light">
+  <div class="hero-body">
+    <div class="container">
+      <!-- Paper video. -->
+      <h2 class="title is-3">Video Presentation</h2>
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          
+          <div class="publication-video">
+            <!-- TODO: Replace with your YouTube video ID -->
+            <div class="notification is-light"><!-- TODO: Replace with the supplementary video embed. -->[Video presentation to be added]</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End youtube video -->
+
+
+<!-- TODO: Add experiment videos using the upstream video carousel when available. -->
+
+
+
+
+
+
+<!-- Paper poster -->
+<section class="hero is-small is-light">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title">Poster</h2>
+
+      <!-- TODO: Replace with your poster PDF -->
+      <div class="notification"><!-- TODO: Replace with the poster PDF embed. -->[Poster to be added]</div>
+        
+      </div>
+    </div>
+  </section>
+<!--End paper poster -->
+
+
+
+<!--BibTex citation -->
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <div class="bibtex-header">
+        <h2 class="title">BibTeX</h2>
+        <!-- TODO: Restore the copy button when the citation is available. -->
+      </div>
+      <!-- TODO: Confirm final venue, year, and DOI before publication. -->
+      <pre id="bibtex-code"><code>[BibTeX citation to be added]</code></pre>
+    </div>
+</section>
+<!--End BibTex citation -->
+
+
+  <footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+
+          <p>
+            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank" rel="noopener">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank" rel="noopener">Nerfies</a> project page.
+            You are free to borrow the source code of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Statcounter tracking code -->
+  
+<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+
+    <!-- End of Statcounter Code -->
+
+  </body>
+  </html>
