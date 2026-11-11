@@ -1,6 +1,10 @@
 # ActiveHardness
 
-Placeholder supplementary website using the Academic Project Page Template. Only the paper title, author list, and affiliations are filled in. All research content, downloads, and publication details are placeholders.
+Supplementary website using the Academic Project Page Template. The header includes the paper title, author list, affiliations, equal contribution note for Junyi Chen and Frederik Heller, and acceptance at Humanoids 2026 (December 6–9, 2026, Santa Clara, California, USA). The page includes the first-page teaser, abstract, a slideshow of five key figures and the performance comparison table, and an arXiv BibTeX citation. The IEEE Paper, Dataset, and Poster are marked coming soon.
+
+- Paper and arXiv: https://arxiv.org/abs/2505.13231
+- Code & Reproduction: https://github.com/alapkshirsagar/tactile-hardness
+- Conference: https://2026.ieee-humanoids.org/
 
 ## Preview
 
@@ -24,7 +28,11 @@ Do not publish the existing local Git history if earlier manuscript assets shoul
 
 ## Editing
 
-Fill the placeholders in `index.html`. Add paper, figures, videos, and citation only when ready for release. The original template CSS and JavaScript are retained. CDN resources require internet access.
+Edit content in `index.html`, styles in `static/css/index.css`, and slideshow behavior in `static/js/paper.js`. The slideshow supports Previous/Next buttons and arrow keys; without JavaScript, all figures remain visible. Select a figure to open its full-resolution PDF. CDN resources require internet access for the template fonts, icons, and scripts.
+
+Paper content comes from `~/uni/2026Humanoids_ActiveHardnessClassification/root_camera_ready_humanoids_2026.tex`. The teaser is copied from `figures/main_figure.png`; slideshow images are rendered from the five figure PDFs referenced by that source and its performance comparison table. Figure PDFs and the rendered table PDF are included in `static/pdfs/`; the standalone table source is in `static/tex/performance-comparison.tex`. The inline citation matches `citation.bib` and uses the arXiv preprint's original publication year, 2025. The abstract's closing sentence is adapted to refer to this website.
+
+Stylesheet and slideshow script URLs include a content version to avoid stale browser caches. Refresh the corresponding version in `index.html` after editing those assets.
 
 ## Attribution
 

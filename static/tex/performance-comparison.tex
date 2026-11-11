@@ -1,0 +1,33 @@
+\documentclass[border=6pt]{standalone}
+\usepackage[T1]{fontenc}
+\usepackage{mathptmx}
+\usepackage{booktabs,makecell,multirow,graphicx}
+\begin{document}
+\begin{minipage}{3.5in}
+\begingroup
+\footnotesize
+\setlength{\tabcolsep}{2pt}
+\renewcommand{\arraystretch}{1.2}
+% Fixed decimal position, with a separate sign column for the SD line.
+\newcommand{\tablevalue}[3]{\makebox[.8em][r]{$#1$}\makebox[1em][r]{$#2$}$.$\makebox[1.5em][l]{$#3$}}
+\newcommand{\besttablevalue}[3]{\makebox[.8em][r]{$#1$}\makebox[1em][r]{\textbf{#2}}\textbf{.}\makebox[1.5em][l]{\textbf{#3}}}
+\begin{tabular*}{\linewidth}{@{}c@{\extracolsep{\fill}}lccccc@{}}
+ \toprule
+ & & Humans & \makecell{No\\resampling} & Variance & Entropy & Random \\
+ \midrule
+ \multirow{4}{*}{\rotatebox{90}{\makecell{Ours\\ConvLSTM}}}
+ & \multirow{2}{*}{Acc.} & \tablevalue{}{48}{0} & \tablevalue{}{65}{1} & \besttablevalue{}{90}{0} & \tablevalue{}{86}{8} & \tablevalue{}{84}{0} \\
+ & & \tablevalue{\pm}{23}{5} & \tablevalue{\pm}{30}{5} & \tablevalue{\pm}{25}{0} & \tablevalue{\pm}{23}{8} & \tablevalue{\pm}{29}{4} \\
+ & \multirow{2}{*}{MAE} & \tablevalue{}{0}{103} & \tablevalue{}{0}{094} & \besttablevalue{}{0}{025} & \tablevalue{}{0}{036} & \tablevalue{}{0}{047} \\
+ & & \tablevalue{\pm}{0}{049} & \tablevalue{\pm}{0}{103} & \tablevalue{\pm}{0}{067} & \tablevalue{\pm}{0}{078} & \tablevalue{\pm}{0}{116} \\
+ \midrule
+ \multirow{4}{*}{\rotatebox{90}{\makecell{Yuan\\DINOv2NN}}}
+ & \multirow{2}{*}{Acc.} & \multirow{2}{*}{---} & \tablevalue{}{69}{2} & \besttablevalue{}{96}{9} & \tablevalue{}{89}{8} & \tablevalue{}{88}{4} \\
+ & & & \tablevalue{\pm}{32}{4} & \tablevalue{\pm}{10}{4} & \tablevalue{\pm}{21}{6} & \tablevalue{\pm}{21}{1} \\
+ & \multirow{2}{*}{MAE} & \multirow{2}{*}{---} & \tablevalue{}{3}{607} & \besttablevalue{}{0}{507} & \tablevalue{}{0}{973} & \tablevalue{}{1}{378} \\
+ & & & \tablevalue{\pm}{4}{253} & \tablevalue{\pm}{1}{915} & \tablevalue{\pm}{1}{935} & \tablevalue{\pm}{2}{938} \\
+ \bottomrule
+\end{tabular*}
+\endgroup
+\end{minipage}
+\end{document}
