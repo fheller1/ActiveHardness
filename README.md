@@ -1,9 +1,10 @@
 # ActiveHardness
 
-Supplementary website using the Academic Project Page Template. The header includes the paper title, author list, affiliations, equal contribution note for Junyi Chen and Frederik Heller, and acceptance at Humanoids 2026 (December 6–9, 2026, Santa Clara, California, USA). The page includes the first-page teaser, abstract, a slideshow of five key figures and the performance comparison table, and an arXiv BibTeX citation. The IEEE Paper, Dataset, and Poster are marked coming soon.
+Supplementary website using the Academic Project Page Template. The header includes the paper title, author list, affiliations, equal contribution note for Junyi Chen and Frederik Heller, and acceptance at Humanoids 2026 (December 6–9, 2026, Santa Clara, California, USA). The page includes the first-page teaser, abstract, a slideshow of five key figures and the performance comparison table, and an arXiv BibTeX citation. The Dataset button links to Google Drive; the IEEE Paper and Poster are marked coming soon.
 
 - Paper and arXiv: https://arxiv.org/abs/2505.13231
 - Code & Reproduction: https://github.com/alapkshirsagar/tactile-hardness
+- Dataset: https://drive.google.com/drive/folders/1gJvGidMRlJVxkEaq6FNFEMP71PO25-3p?usp=sharing
 - Conference: https://2026.ieee-humanoids.org/
 
 ## Preview
